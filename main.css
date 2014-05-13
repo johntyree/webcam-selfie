@@ -28,12 +28,6 @@ margin: 0 0 1.5em 0;
   }
 }
 
-@media screen and (min-width: 1000px) {
-  video, img {
-    height: 540px;
-  }
-}
-
 audio {
 max-width: 100%;
 }
@@ -96,8 +90,8 @@ overflow-y: scroll;
 }
 
 img {
-border: none;
-max-width: 100%;
+    border: none;
+    max-width: 100%;
 }
 
 p {
@@ -120,8 +114,11 @@ padding: 0 0 20px 0;
 }
 
 video {
-background: #222;
-width: 100%;
+    background: #222;
+    width: 100%;
+}
+img {
+    width: 100%;
 }
 
 @media screen and (max-width: 650px) {

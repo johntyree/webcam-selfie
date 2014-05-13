@@ -8,8 +8,8 @@ var localMediaStream = null;
 
 function snapshot() {
     if (localMediaStream) {
-        ctx.drawImage(video, 0, 0);
-        document.querySelector('img').src = canvas.toDataURL('image/webp');
+        ctx.drawImage(video, 0, 0, 640, 480, 0, 0, 640, 480);
+        document.querySelector('img').src = canvas.toDataURL('image/png');
     }
 }
 
@@ -28,4 +28,8 @@ function errorCallback(error) {
     console.log('navigator.getUserMedia error: ', error);
 }
 
-navigator.getUserMedia(constraints, successCallback, errorCallback);
+function grabStream() {
+    navigator.getUserMedia(constraints, successCallback, errorCallback);
+}
+
+grabStream();
