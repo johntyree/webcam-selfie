@@ -9,11 +9,14 @@ var localMediaStream = null;
 function snapshot() {
     if (localMediaStream) {
         ctx.drawImage(video, 0, 0, 640, 480, 0, 0, 640, 480);
-        document.querySelector('img').src = canvas.toDataURL('image/png');
     }
 }
 
 video.addEventListener('click', snapshot, false);
+
+function pushFrame() {
+    snapshot();
+}
 
 function successCallback(stream) {
   localMediaStream = stream; // stream available to console
@@ -22,6 +25,7 @@ function successCallback(stream) {
   } else {
     video.src = stream;
   }
+  window.setInterval(pushFrame, 60);
 }
 
 function errorCallback(error) {
