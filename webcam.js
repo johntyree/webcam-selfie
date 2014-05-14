@@ -12,8 +12,6 @@ function snapshot() {
     }
 }
 
-video.addEventListener('click', snapshot, false);
-
 function pushFrame() {
     snapshot();
 }
