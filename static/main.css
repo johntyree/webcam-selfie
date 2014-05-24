@@ -1,0 +1,33 @@
+a {
+    color: #77aaff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #88bbff;
+    text-decoration: underline;
+}
+
+audio {
+    max-width: 100%;
+}
+
+video {
+    background: #222;
+    width: 100%;
+}
+
+body {
+    background: #666;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1.5em;
+    word-break: break-word;
+}
+
+div#container {
+    background: #000;
+    margin: 0 auto 0 auto;
+    max-width: 40em;
+    padding: 1em 1.5em 1.3em 1.5em;
+}

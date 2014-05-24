@@ -2,14 +2,17 @@
 <html>
 <head>
     <title>Webcam Selfie</title>
-    <link rel="stylesheet" type="text/css" href="main.css" />
-    <style type="text/css">
-    </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/main.css" />
+    <script src="//www.WebRTC-Experiment.com/RecordRTC.js"></script>
 </head>
 <body>
-    <div id="container"><video width="640" height="480" autoplay></video></div>
-    <div id="container"><canvas width="640" height="480"></canvas></div>
+    <div id="container">
+        <video controls=true width="640" height="480" autoplay></video>
+        <button id="toggle-recording">Start Recording</button>
+        <a id='download-link' href="#" target="_blank" style='visibility: hidden'>
+            Download Your Selfie!
+        </a>
+    </div>
+    <script type="text/javascript" src='static/webcam.js'></script>
 </body>
-<script type="text/javascript" src='webcam.js'></script>
 </html>
